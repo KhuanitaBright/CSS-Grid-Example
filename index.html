@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Muddy Boots</title>
+
+    <!-- This is the link for the favicon -->
+    <link rel="icon" type="image/png" href="Images/hiking-boot.png">
+
+        <!-- Link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+    /*This is the overall body comands*/
+
+    body {
+      display: grid;
+      max-width: 960px;
+      line-height: 20px;
+    }
+
+    @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 2000px)
+  and (-webkit-min-device-pixel-ratio: 2){
+        body {
+          display: grid;
+          max-width: 100%;
+          line-height: normal;
+          padding: 50px;
+          font-size: 7px;
+          color: red;
+        }
+      }
+
+
+      /*This wrapper class contains the grid used for the page layout*/
+.wrapper {
+      display: grid;
+      grid-row: 12/12;
+      grid-column: 12/12;
+      border: 1px solid #fff;
+      margin-left: 100px;
+      grid-gap: 4px;
+      grid-template-columns: 100px 100px 100px;
+      grid-auto-columns: 100px;
+      background-color: #fff;
+    }
+
+      /*This class is directed at the main boxes for areas*/
+  .box {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      font-size: 100%;
+      text-align: left;
+      height: 200px;
+    }
+
+    @media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2){
+    .box{
+      background-color: grey;
+      color: red;
+      padding: 10px;
+      font-size: 100%;
+      text-align: center;
+      height: 50px;
+    }
+  }
+
+      /*header is affected by this class*/
+.a {
+      grid-column: 1 / 12;
+      grid-row: 1 / 2 ;
+      height: auto;
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 0;
+      color: black;
+
+    }
+      /*Picture string below nav bar is affected by this class*/
+    .b {
+      grid-column: 1 / 12;
+      grid-row: 3/4;
+      height: auto;
+    }
+
+      /*section is affected by this class*/
+  .c {
+      grid-column: 1 / 10;
+      grid-row: 4 / 11;
+      color: black;
+      height: auto;
+      padding-top: 1px;
+  }
+      /*sidebar is affected by this class*/
+  .d {
+      grid-column: 10 / 12 ;
+      grid-row: 4 / 11;
+      height: auto;
+      color: black;
+  }
+
+      /*navbar and its background is affected by this class*/
+  .e {
+      grid-column: 1 / 12;
+      grid-row: 2 / 3;
+      height: auto;
+      text-align: left;
+      background: #627d4d; /* Old browsers */
+      background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+      /*footer and it's background is affected by this class*/
+  .f {
+    grid-column: 1 / 12;
+    grid-row: 11 / 12 ;
+    height: auto;
+    width: 1100px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 0;
+    color: black;
+    background: #627d4d; /* Old browsers */
+    background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 2){
+      .f {
+        grid-column: 1 / 12;
+        grid-row: 11 / 12 ;
+        height: auto;
+        width: 1000px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 0;
+        color: green;
+        background: #627d4d; /* Old browsers */
+        background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+
+      /*for grids within section (boxes within grids)*/
+  .test {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+
+  }
+
+      /*This is the commands for the h2*/
+
+  h2 {
+    text-align: center;
+    padding: 20px;
+    background: #627d4d; /* Old browsers */
+    background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=0 ); /* IE6-9 */
+  }
+
+/*style for paragraps*/
+  .p {
+    border-left: 1px solid lightgrey;
+    padding-left: 5px;
+  }
+    /*style for h4*/
+  h4 {
+    border-bottom: 2px solid #53B86D;
+    line-height: 30px;
+  }
+
+    /*This is an individual command for the h3*/
+  #h3-special {
+    border-bottom: 2px solid #53B86D;
+    line-height: 40px;
+  }
+
+  /*style for side bar*/
+  .side {
+    display: list-item;
+    list-style-type: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: 1px solid #53B86D;
+    text-align: center;
+    font-size: 14px;
+  }
+
+/* Individual styling for social media icons*/
+  #icons {
+    text-align: left;
+    padding:0;
+  }
+
+    /*This is the styling for my links*/
+  a {
+    color: #34A853;
+  }
+
+  a:hover {
+    color: grey;
+  }
+
+  /*This is the styling for the nav bar and it's list items*/
+  ul {
+    list-style-type: none;
+    display: inline;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+  }
+
+  li {
+    float: left;
+    display: inline;
+  }
+
+  li a {
+    display: inline;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+   li a:hover {
+     color: grey;
+     background-color: transparent;
+     text-decoration: underline;
+    }
+
+          /*list for the pictures under nav bar*/
+
+   #ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+    }
+
+   #li {
+      float: left;
+    }
+
+   #li a {
+      display: inline;
+      text-decoration: none;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+   #li a:hover {
+      opacity: 0.7;
+    }
+
+    /*This is a specific styling command for my images*/
+  .img {
+      padding: 10px;
+      float: left;
+
+  }
+
+    /*The following style command is for my icons*/
+  .fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-external-link-square {
+    background: white;
+    color: black;
+    font-size: 8px;
+  }
+
+  .fa-facebook {
+    background: #3F5C9A;
+    color: white;
+  }
+
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #1DA1F2;
+    color: white;
+
+  }
+  .fa-instagram {
+  background: #e4405f;
+  color: white;
+ }
+
+
+    </style>
+
+  </head>
+        <!-- body starts -->
+  <body>
+        <!-- wrapper contains the entire body's grid layout -->
+    <div class="wrapper">
+
+        <!-- box a contains the grid laout for the header -->
+
+  <div class="box a" id="Home">
+
+        <!-- The header starts. It contains a logo and a news letter form -->
+
+      <header class="test">
+
+
+        <img src="Images/mblogo.png" alt="Muddy Boots Logo" height="150px" width="250">
+
+        <form>
+
+          <h3 id="h3-special">Join our newsletter</h3>
+
+        <input type="text" name="email" title="Sign up for our newsletter" placeholder="Your Email" autocomplete="off" class="mailchimp-subscribe__input">
+
+        <input type="radio" name="gender" value="male">daily
+        <input type="radio" name="gender" value="male">weekly
+        <input type="radio" name="gender" value="male">both
+
+        <button type="submit" title="Sign Up" class="mailchimp-subscribe__button">
+                   Submit</button>
+      </form>
+
+      </header>
+          <!-- header ends -->
+  </div>
+
+          <!-- box b contains the picture string -->
+  <div class="box b">
+
+    <section>
+
+        <ul id="ul">
+
+          <li id="li"><a href="#camp"><img src="Images/camp/alexey-ruban-98474.jpg" alt="camp" height="200" width="270"></a></li>
+              <li id="li"><a href="#rock"><img src="Images/Rock/ferhat-deniz-fors-39654.jpg" alt="camp" height="200" width="270"></a></li>
+               <li id="li"><a href="#fish"><img src="Images/fish/alan-bishop-49711.jpg" alt="camp" height="200" width="270"></a></li>
+                        <li id="li"><a href="#hike"><img src="Images/hike/scott-webb-18686.jpg" alt="camp" height="200" width="270"></a></li>
+
+                        <!-- <li id="li"><a href="#"><img src="Images/fish/alan-bishop-49711.jpg" alt="camp" height="100" width="120"></a></li>
+                         <li id="li"><a href="#"><img src="Images/hike/scott-webb-18686.jpg" alt="camp" height="100" width="120"></a></li> -->
+                         <!-- <li id="li"><a href="#"><img src="Images/camp/camping.jpg" alt="camp" height="100" width="120"></a></li>
+                            <li id="li"><a href="#"><img src="Images/camp/alexey-ruban-98474.jpg" alt="camp" height="100" width="120"></a></li>
+                              <li id="li"><a href="#"><img src="Images/fish/alan-bishop-49711.jpg" alt="camp" height="100" width="120"></a></li> -->
+
+        </ul>
+
+    </section>
+
+  </div>
+
+        <!-- box c contains this content for the page -->
+  <div class="box c">
+
+    <section>
+
+      <h2 id="camp">Camping Sites:</h2>
+
+
+      <div class="test">
+
+            <img class="img" src="http://www.capenature.co.za/wp-content/uploads/2013/08/Limietberg-with-WHS-logo-4.jpg" alt="Tweede Tol" height="350px" width="400px">
+
+
+            <p class="p"><b>Location:</b> Tweede Tol<br><br>
+
+              <b>Description:</b> Limietberg is a pristine nature reserve tucked away in the Du Toitskloof Mountains, near Paarl. The reserve stretches from Franschhoek in the south, eastwards towards Groot Drakenstein, and northwards as far as Voëlvlei Dam and is a World Heritage Site.<br><br>
+
+              Limietberg offers a number of beautiful hikes through steep kloofs and deep valleys. Du Toits Peak, at 1 996m, is the highest point within the reserve. Visitors can also visit the many historical sites along the trails, including ancient rock art, a disused manganese mine and the graves of convicts who helped build the Bainskloof Pass.<br><br>
+
+              To find out more, and for a detailed breakdown of the campsite, <a href="file:///C:/Users/Academy13/Desktop/MyProjectsKB/css_grid_project/Images/camp/Tweede-Tol-Map-Brochure.pdf" target= "_blank">download</a> the Limietberg Nature Reserve and Tweede Tol campsite brochure and map.
+
+
+      </div>
+
+            <h2 id="rock">Rock Climbing</h2>
+
+      <div class="test">
+
+        <p><img class="img" src="Images/Rock/Montagu.png" alt="Montagu" height="300px" width="400px">
+
+
+        <b>Location:</b> Montagu Rock Climbing<br><br>
+
+          <b>Description:</b> Montagu is recognised as one of the most outstanding climbing destinations in South Africa due to the quality and number of climbing routes available.  Montagu’s rock walls offer a wide variety of high quality climbing opportunities at every level from beginner to expert.  The small town of Montagu is situated in the Klein Karoo (semi desert region) on the east side of the Langeberg mountain range 2 hours / 200km drive east of Cape Town.<br><br>
+
+          The climate in Montagu is ideal for climbing!  It is easy to find either shade or sun, and conditions can be perfect in any season.  We have hot summers and crisp winters.  Rainfall in the klein karoo is significantly less than in other parts of the Western Cape.  When it does rain, it is usually a brief shower, and normally doesn’t interfere with climbing. Find the map to Montagu <a href="https://www.montaguclimbing.com/wp-content/uploads/2012/06/MapOfMontaguClimbing.jpg" target="_blank">here</a></p>
+
+
+          <p class="p"><img class="img" src="https://static.wixstatic.com/media/9f5706_823caa4fcf054c3588a9369cd90bd0f8.jpg/v1/crop/x_0,y_0,w_1225,h_717/fill/w_263,h_153,al_c,q_80,usm_0.66_1.00_0.01/9f5706_823caa4fcf054c3588a9369cd90bd0f8.webp" alt="Rocklands" height="300px" width="400px">
+
+        <b>Location:</b> Rocklands Rock Climbing<br><br>
+
+          <b>Description:</b> Rocklands is found in the Cederberg mountains 250km/3 hours north of Cape Town. It is a very beautiful area in a semi-desert setting, very isolated and very safe. Rocklands is undoubtedly famous for it's world class bouldering but this should not deter you from sampling the fine sport climbing.<br><br>
+
+          There is a large variety of quality climbing of all grades in both bouldering and sport climbing. All the sport routes are single pitch and you will have to do a small amount of walking to get to the different areas. Most of the original climbing is situated on CapeNature land and thus day or week permits must be obtained. Permits for bouldering are not covered by Wild Cards. Many of the newer areas being developed are on private farms some which have small (30-40 rand) day fees.
+
+          You can find route information by clicking <a href="http://www.climbing.co.za/wiki/Rocklands#Rocklands_Bouldering_Areas" target="_blank">here</a></p>
+
+        </div>
+
+      <div class="test">
+
+        <img class="img" src="https://globaltravelart.files.wordpress.com/2017/06/schild.jpg?w=695" alt="Silvermine" height="300px" width="400px">
+
+        <p class="p"><b>Location:</b> Silvermine Crags<br><br>
+
+          <b>Description:</b> Silvermine is probably the most popular climbing area on the Cape Peninsula with short walk-ins, good rock quality and many excellent routes. Silvermine has five different crags and over 80 routes with grades ranging from 13 to 28. The crags go into the shade in the early afternoon. The Lower Silvermine Crag has easy routes and is perfect for beginners, Blaze of Glory is a little harder, Silvermine Main Crag is a good all round crag and Fawlty Towers for some harder stuff. The most recent addition is Silverminor Crag.<br><br>
+
+          The Silvermine Crags have been climbed since the 60′s, but the crags first became popular when they were bolted in the 90′s. In 2008, many of classic routes have been re-bolted. Behind the ridge are four different crags: the Lower Silvermine Crag has easy routes and is perfect for beginners, Blaze of Glory is a little harder, Silvermine Main Crag is a good all round crag and Fawlty Towers for some harder stuff. find map <a href="https://www.thecrag.com/climbing/south-africa/silvermine">Here</a></p>
+      </div>
+<!-- Change all the pictures alt names -->
+            <h2 id="hike">Hiking Trail</h2>
+
+      <div class="test">
+
+        <p><img class="img" src="http://www.lifeofmike.co.za/wp-content/uploads/2016/10/Tranquility-Cracks-Hike-23.jpg" alt="Tranquility" height="300px" width="400px">
+
+          <b>Location:</b> Tranquility Cracks<br><br>
+
+          <b>Description:</b> Tranquility Cracks refers directly to deep fissures in the rocks above Camps Bay through which one passes, about halfway along the Twelve Apostles. Beyond the cracks is a labyrinth of rocky corridors.<br><br>
+
+          There are a number of passages to choose from, all of which offer incredible views. Inside the cracks grow yellowwood trees that have earned the hike the alternative title of Yellowwood Cracks. Here you are sheltered from any wind and sun. Corridor Ravine is one of several paths that lead off the Pipe Track and is considered the easiest.<br><br>
+
+
+          How long you spend here is dependent on how much you want to explore. It's a perfect place to stop and picnic and, if you are lucky, you will have the place to yourselves. Find a Map <a href="https://www.google.co.za/maps/dir/''/tranquility+cracks+route/@-33.9798779,18.3129729,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x1dcc67d375e0c5c5:0xfb4541faf72a5277!2m2!1d18.383013!2d-33.9798977" target="_blank">here</a></p>
+
+
+          <p class="p"><img class="img" src="http://migratingmuse.com/wp-content/uploads/2015/03/DSC08980.jpg" alt="Witels" height="300px" width="400px">
+
+          <b>Location:</b> Witels Hiking Trial<br><br>
+
+          <b>Description:</b> To do the river from the top, one has to hike in via the UCT Ski Club Hut from the south side. It is a serious hike that can take a full day with a kayak. From here down, expect to do an overnight trip, unless you know the river well. The only way to get access to the trail is to arrange it beforehand with the UCT Mountain Club, who controls this part of the mountains. The other put-in is from the northern side. This hike starts from a farm called Merwede, on a trail commonly known as Adderley Street. This hike is also a mission, and reaches the river halfway down. Ask permission to gain access on the farm.<br><br>
+
+          The river is extremely continuous. The top section just after the first put-in is very tight, but it opens up somewhat after a few kilometres. Even then, the river still consists of continuous class 3 to 4 rapids. Find map <a href="https://www.google.co.za/maps/place/Witels,+Ceres,+6835/@-33.4343244,19.339993,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcd6fd65a878c7b:0x31cf1f634a92f95c!8m2!3d-33.4343244!4d19.3421817"> here.</a></p>
+
+      </div>
+
+
+        <div class="test">
+
+        <p><img class="img" src="Images/hike/right-face-arrow-traverse_06-800x375.jpg" alt="RFAT" height="300px" width="400px">
+
+        <b>Location:</b> Right-Face-Arrow-Traverse<br><br>
+
+          <b>Description:</b> Start out your route by following the instructions for the India—Venster Route. When you have passed through the scrambles, and are standing directly below the Upper Cableway Station, you are ready to make your detour onto the face of the mountain!<br><br>
+
+           You are more-or-less level with the middle one, called Africa Ledge, but will be heading down slightly to the lower one, the Right Face — Arrow Face Traverse. Drop down the trail to the path that is visible below to your left. Keep your eyes open all the way along the traverse: I saw some healthy Blister Bushes along the way! The ledge you are on becomes narrower, and just when you arrive at a point [S 33°57.462′, E 18°24.278′] where it seems to end altogether: at this point, you turn to your right, and worm you way into the crack that goes into the mountain. Find map <a href="https://www.google.co.za/maps/place/India+Venster/@-33.9513308,18.400666,17z/data=!3m1!4b1!4m5!3m4!1s0x1dcc67bd4e979605:0xbf73c26e547c7433!8m2!3d-33.9513308!4d18.4028547"> here.</a></p>
+
+          <p class="p"><img class="img" src="Images/hike/IMG_2087.jpg" alt="Alphen" height="300px" width="400px">
+
+          <b>Location:</b> Alphen Hiking Trails<br><br>
+
+          <b>Description:</b> In the Constantia valley in the Southern Suburbs there are several walking trails along tracts of land between the residences. These are known collectively as the Greenbelt. For more information about the area and the various routes <a href="http://www.zandvleitrust.org.za/art-constantia%20walking%20trails-Alphen%20trail.html">here.</a><br><br>
+
+           9 different interlinking walking trails, are each about 30 – 45 minutes in extent and are situated in the Constantia Valley. The Friends of Constantia Valley Greenbelts had these maps published.  One of the most popular is the Alphen Trail, part of which takes you along the Diep River (which has its own hiking trail) to the Constantiaberg Mountain. There’s also the Doordrift Walk that starts in the same place (Alphen Drive) but leads in the other direction. Find map <a href="https://www.google.co.za/maps/place/Alphen+Trail/@-33.9513109,18.3328138,12z/data=!4m8!1m2!2m1!1sAlphen+hiking+trails!3m4!1s0x1dcc428b5546a327:0x1220e62d15394b7d!8m2!3d-34.0135076!4d18.4512793">here.</a></p>
+      </div>
+
+          <h2 id="fish">Fishing</h2>
+
+      <div class="test">
+
+            <p><img class="img" src="https://images.budget-getaways.co.za/__2192__l_IMG00027-20100718-1546.jpg" alt="Tulbagh" height="300px" width="400px">
+
+            <b>Location</b>: Tulbagh<br><br>
+
+              <b>Description</b>:Just 80 minutes’ drive north of Cape Town, at the northern edge of one of the most beautiful fertile valleys in the country, lies the historical town of Tulbagh. The village nestles in amongst the Winterhoek, Witzenberg and Obiqua Mountains, which surround it on three sides and provide one of the most beautiful settings in the Western Cape.<br><br>
+
+              Proteas and herbs grow wild here and peaches, pears and 70 percent of the country’s plums are farmed in the shadow of the mountains. The valley is perhaps best known for its production of some of the country’s finest wines. Estate wines such as Twee Jonge Gezellen, Drostdyhof and Theuniskraal originate in the valley known as Het Land van Waveren where wines have been cultivated since 1906. Fond map <a href="https://www.google.co.za/maps/place/Tulbagh,+6820/@-33.2856358,19.1275383,14z/data=!3m1!4b1!4m5!3m4!1s0x1dcd3ee06ebe81bf:0x82906e7b09fcfa78!8m2!3d-33.2872221!4d19.1434108">here.</a></p>
+
+
+              <p class="p"><img class="img" src="https://i.ytimg.com/vi/ykaZiuCvCVI/maxresdefault.jpg" alt="EC Highlands" height="300px" width="400px">
+
+              <b>Location:</b> Eatern Cape Highlands<br><br>
+
+              <b>Description:</b> The Eastern Cape Highlands has 300km of streams, strictly fly fishing only, and supports catch and release. Each multi-kilometre ‘beat’ is booked as sole access. The climate ranges from -15°C to 35°C and conditions can be extreme any time of year. The nearest doctor is in Barkly East, an hour from Rhodes (0459710285). Get detailed maps and fishing info from the Wild Trout Association.<br><br>
+
+               They say fishing is easy to teach and hard to learn, but that undersells what can be imparted by a skilled tutor. Fly fishing in particular is an arcane art, a world of ‘white Wulff wings’ and ‘peacock woolly buggers’ (just two common fly patterns used in the area), and with ever-changing conditions and fish that seem to learn and spurn flies with disconcerting regularity, any edge you can get is an advantage. find map <a href="https://www.google.co.za/maps/place/Highlands/@-31.2499983,25.5491573,14z/data=!3m1!4b1!4m5!3m4!1s0x1e87d12addfb6c05:0x32908fedad88215a!8m2!3d-31.25!4d25.566667">here.</a></p>
+
+      </div>
+
+  </div>
+
+    </section>
+
+        <!-- section ends -->
+
+        <!-- Box d contains the sidebar for the page which includes external links, social media icons as well as featured articles -->
+
+  <div class="box d">
+
+        <div class="side">
+
+            <!-- featured articles -->
+          <h4>Featured:</h4>
+
+          <img class="img" src="https://images.budget-getaways.co.za/__2192__l_IMG00027-20100718-1546.jpg" alt="camp" height="100px" width="150px">
+
+          <p><a href="#">The Eastern Cape Highlands</a><br>
+
+             The Eastern Cape Highlands has 300km of streams, strictly fly fishing only, and supports catch and release.</p>
+
+          <img class="img" src="Images/hike/IMG_2087.jpg" alt="camp" height="100px" width="150px">
+
+          <p><a href="#">The Alphen Trails</a> <br>
+
+            In the Constantia valley in the Southern Suburbs there are several walking trails along tracts of land between the residences.</p>
+
+        </div>
+
+            <!-- External links -->
+        <div class="side" id="icons">
+
+          <h4>You May Also Like:</h4>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.saoutdoors.co.za/" target="_blank">SA Outdoors</a><br>
+          <i class="fa fa-external-link-square"></i><a href="https://www.roughit.co.za/" target="_blank">Rough It</a><br>
+          <i class="fa fa-external-link-square"></i><a href="https://www.sa-venues.com/activities/default.htm" target="_blank">SA Activities</a><br>
+          <i class="fa fa-external-link-square"></i><a href="https://www.places.co.za/html/adventures.html" target="_blank">SA Adventures </a><br>
+          <i class="fa fa-external-link-square"></i><a href="https://www.active-escapes.co.za/" target="_blank">Active Escapes</a><br>
+          <i class="fa fa-external-link-square"></i><a href="https://www.ventureforth.co.za/" target="_blank">Venture Forth</a><br>
+          <i class="fa fa-external-link-square"></i><a href="https://sunscene.co.za/" target="_blank">SunScene </a><br>
+
+        </div>
+
+              <!-- social icons -->
+        <div class="side" id="icons">
+
+          <h4>Get in touch:</h4>
+
+          <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a><br>
+          <a href="#" target="_blank"><i class="fa fa-twitter"></i>Twitter</a><br>
+          <a href="#" target="_blank"><i class="fa fa-youtube"></i>Youtube</a><br>
+          <a href="#" target="_blank"><i class="fa fa-instagram"></i>Instagram</a>
+
+        </div>
+  </div>
+
+        <!-- box e contains the nav bar -->
+  <div class="box e">
+
+
+    <nav>
+
+          <ul>
+
+              <li><a href="#Home">Home<a></li>
+                  <li><a href="#hike">Hiking<a></li>
+                    <li><a href="#rock">Rock Climbing<a></li>
+                      <li><a href="#camp">Camping<a></li>
+                        <li><a href="#fish">Fishing<a></li>
+                          <li><a href="css_grid_project_gallery.html">Gallery<a></li>
+                            <li><a href="css_grid_project_contactpage.html">Contact<a></li>
+
+          </ul>
+
+        </nav>
+
+
+  </div>
+
+      <!-- box f contains the footer -->
+ <div class="box f">
+
+    <footer class="test">
+
+
+          <img src="Images/hiking-boot.png" alt="Muddy Boots Logo Footer" height="100px" width="100px">
+
+
+          <form>
+
+            <h3 id="h3-special">Join our newsletter</h3>
+          <input type="text" name="email" title="Sign up for our newsletter" placeholder="Your Email" autocomplete="off" class="mailchimp-subscribe__input">
+
+          <input type="radio" name="gender" value="male">daily
+          <input type="radio" name="gender" value="male">weekly
+          <input type="radio" name="gender" value="male">both
+
+          <button type="submit" title="Sign Up" class="mailchimp-subscribe__button">
+                     Submit</button>
+
+
+        </form>
+
+
+        </div>
+
+    </footer>
+          <!-- footer ends -->
+
+</div>
+          <!-- The div for the wrapper closes -->
+
+  </body>
+</html>

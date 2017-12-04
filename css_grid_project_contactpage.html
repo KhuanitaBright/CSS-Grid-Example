@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Muddy Boots</title>
+
+    <!-- This is the link for the favicon -->
+    <link rel="icon" type="image/png" href="Images/hiking-boot.png">
+
+        <!-- Link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+      /*This is the overall body comands*/
+    body {
+      display: grid;
+      max-width: 960px;
+      line-height: 20px;
+
+    }
+
+   /*This wrapper class contains the grid used for the page layout*/
+    .wrapper {
+      display: grid;
+      grid-row: 12/12;
+      grid-column: 12/12;
+      border: 1px solid #fff;
+      margin-left: 100px;
+      grid-gap: 4px;
+      grid-template-columns: 100px 100px 100px;
+      grid-auto-columns: 100px;
+      background-color: #fff;
+    }
+
+      /*This class is directed at the main boxes for areas*/
+  .box {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      font-size: 100%;
+      text-align: left;
+      height: 200px;
+
+    }
+
+      /*header is affected by this class*/
+.a {
+      grid-column: 1 / 12;
+      grid-row: 1 / 2 ;
+      height: auto;
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 0;
+      color: black;
+
+    }
+      /*section is affected by this class*/
+  .c {
+      grid-column: 1 / 10;
+      grid-row: 4 / 11;
+      color: black;
+      height: auto;
+      padding-top: 1px;
+  }
+
+      /*navbar and its background is affected by this class*/
+  .e {
+      grid-column: 1 / 12;
+      grid-row: 2 / 3;
+      height: auto;
+      text-align: left;
+      background: #627d4d; /* Old browsers */
+      background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+    /*sidebar is affected by this class*/
+    .d {
+      grid-column: 10 / 12 ;
+      grid-row: 4 / 11;
+      height: auto;
+      color: black;
+}
+
+    /*footer and it's background is affected by this class*/
+    .f {
+      grid-column: 1 / 12;
+      grid-row: 11 / 12 ;
+      height: auto;
+      width: 1100px;
+      text-align: left;
+      padding-top: 10px;
+      padding-bottom: 0;
+      color: black;
+      background: #627d4d; /* Old browsers */
+      background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+/* Individual styling for social media icons*/
+    #icons {
+      text-align: left;
+      padding:0;
+    }
+
+    /*Link styling*/
+    a {
+      color: #34A853;
+    }
+
+    a:hover {
+      color: grey;
+    }
+
+    /*This is the styling for the nav bar and it's list items*/
+    ul {
+      list-style-type: none;
+      display: inline;
+      font-size: 18px;
+      text-align: center;
+      color: white;
+    }
+
+    li {
+      float: left;
+      display: inline;
+    }
+
+    li a {
+      display: inline;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+     li a:hover {
+       color: grey;
+       background-color: transparent;
+       text-decoration: underline;
+      }
+
+        /*This is the styling for icons including socila media and external*/
+    .fa {
+      padding: 10px;
+      font-size: 20px;
+      width: 20px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+
+    .fa:hover {
+        opacity: 0.7;
+    }
+
+    .fa-external-link-square {
+      background: white;
+      color: black;
+      font-size: 8px;
+    }
+
+    .fa-facebook {
+      background: #3F5C9A;
+      color: white;
+    }
+
+
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #1DA1F2;
+      color: white;
+
+    }
+    .fa-instagram {
+    background: #e4405f;
+    color: white;
+  }
+
+
+      /*for grids within section*/
+    .test {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 5px;
+      padding: 20px;
+      margin-left: 10px;
+      text-align: center;
+
+    }
+
+        /* test2 is specifically aimed at the contact page section*/
+    .test2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 5px;
+      padding: 20px;
+      margin-left: 10px;
+      text-align: left;
+
+    }
+
+    /*This is the styling for the nav bar and it's list items*/
+    ul {
+      list-style-type: none;
+      display: inline;
+      font-size: 18px;
+      text-align: center;
+      color: white;
+    }
+
+    li {
+      float: left;
+      display: inline;
+    }
+
+    li a {
+      display: inline;
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+     li a:hover {
+       color: grey;
+       background-color: transparent;
+       text-decoration: underline;
+      }
+
+      /*Styling for h2*/
+    h2 {
+      text-align: center;
+      padding: 20px;
+      background: #627d4d; /* Old browsers */
+      background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=0 ); /* IE6-9 */
+    }
+
+      /*The following input settings is aimed at the contact form. It ensures the hover on the boxes of the contact form*/
+    input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    }
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+    }
+    input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+
+    input[type=email]:focus {
+        border: 3px solid #555;
+    }
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        resize: none;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+      <!-- wrapper for the entire page starts -->
+    <div class="wrapper">
+
+      <!-- box a contains the header, including the logo and the newsletter form -->
+  <div class="box a" id="Home">
+
+      <header class="test">
+
+
+        <img src="Images/mblogo.png" alt="Muddy Boots Logo" height="150px" width="250">
+
+        <form>
+
+          <h3 id="h3-special">Join our newsletter</h3>
+
+        <input type="text" name="email" title="Sign up for our newsletter" placeholder="Your Email" autocomplete="off" class="mailchimp-subscribe__input">
+
+        <input type="radio" name="gender" value="male">daily
+        <input type="radio" name="gender" value="male">weekly
+        <input type="radio" name="gender" value="male">both
+
+        <button type="submit" title="Sign Up" class="mailchimp-subscribe__button">
+                   Submit</button>
+      </form>
+
+      </header>
+        <!-- header ends -->
+  </div>
+
+        <!-- box c contains the contact form -->
+  <div class="box c">
+
+        <!-- section contains the main content for the page -->
+    <section class="test2">
+
+           <h2>Contact Us</h2>
+
+           <!-- Contact form starts -->
+             <form action="/action_page.php">
+
+               <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+
+                <label for="textarea">Message</label>
+                <textarea></textarea>
+
+                <button type="submit" title="Sign Up"> Submit</button>
+                <button type="reset" title="Reset"> Reset</button>
+              </form>
+            <!-- Contact form ends -->
+
+    </section>
+            <!-- section ends -->
+
+    </div>
+
+
+            <!-- box e contains the nav bar -->
+  <div class="box e">
+
+    <nav>
+
+          <ul>
+
+              <li><a href="index.html">Home<a></li>
+                  <li><a href="#hike">Hiking<a></li>
+                    <li><a href="#rock">Rock Climbing<a></li>
+                      <li><a href="#camp">Camping<a></li>
+                        <li><a href="#fish">Fishing<a></li>
+                          <li><a href="css_grid_project_galery.html">Gallery<a></li>
+                            <li><a href="css_grid_project_contactpage.html">Contact<a></li>
+
+          </ul>
+
+        </nav>
+            <!-- nav ends -->
+
+  </div>
+
+            <!-- box d contains the side bar including external links and icons -->
+  <div class="box d">
+
+        <div class="side" id="icons">
+
+          <h4>You May Also Like:</h4>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.saoutdoors.co.za/" target="_blank">SA Outdoors</a><br>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.roughit.co.za/" target="_blank">Rough It</a><br>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.sa-venues.com/activities/default.htm" target="_blank">SA Activities</a><br>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.places.co.za/html/adventures.html" target="_blank">SA Adventures </a><br>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.active-escapes.co.za/" target="_blank">Active Escapes</a><br>
+
+          <i class="fa fa-external-link-square"></i><a href="https://www.ventureforth.co.za/" target="_blank">Venture Forth</a><br>
+
+          <i class="fa fa-external-link-square"></i><a href="https://sunscene.co.za/" target="_blank">SunScene </a><br>
+
+        </div>
+
+
+        <div class="side" id="icons">
+
+          <h4>Get in touch:</h4>
+
+          <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a><br>
+          <a href="#" target="_blank"><i class="fa fa-twitter"></i>Twitter</a><br>
+          <a href="#" target="_blank"><i class="fa fa-youtube"></i>Youtube</a><br>
+          <a href="#" target="_blank"><i class="fa fa-instagram"></i>Instagram</a>
+
+        </div>
+  </div>
+
+        <!-- box f contains the footer -->
+ <div class="box f">
+
+    <footer class="test">
+
+
+          <img src="Images/hiking-boot.png" alt="Muddy Boots Logo Footer" height="100px" width="100px">
+
+          <form>
+
+            <h3 id="h3-special">Join our newsletter</h3>
+          <input type="text" name="email" title="Sign up for our newsletter" placeholder="Your Email" autocomplete="off" class="mailchimp-subscribe__input">
+
+          <input type="radio" name="gender" value="male">daily
+          <input type="radio" name="gender" value="male">weekly
+          <input type="radio" name="gender" value="male">both
+
+          <button type="submit" title="Sign Up" class="mailchimp-subscribe__button">
+                     Submit</button>
+        </form>
+
+
+        </div>
+
+    </footer>
+        <!-- footer ends -->
+
+</div>
+
+
+  </body>
+</html>

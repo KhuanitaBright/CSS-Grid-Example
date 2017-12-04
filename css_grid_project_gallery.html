@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Muddy Boots</title>
+
+    <!-- This is the link for the favicon -->
+    <link rel="icon" type="image/png" href="Images/hiking-boot.png">
+
+        <!-- Link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        /*This is the overall body comands*/
+    body {
+      display: grid;
+      max-width: 960px;
+      line-height: 20px;
+      font-family:Cambria, Georgia, serif;
+    	font-size:100%;
+    	margin:0;
+    	padding:0;
+    }
+
+      /*this is specific imag styling*/
+    img{
+    	border:none;
+    	max-width:95%;
+    }
+
+      /*This wrapper class contains the grid used for the page layout*/
+  .wrapper {
+        display: grid;
+        grid-row: 12/12;
+        grid-column: 12/12;
+        border: 1px solid #fff;
+        margin-left: 100px;
+        grid-gap: 4px;
+        grid-template-columns: 100px 100px 100px;
+        grid-auto-columns: 100px;
+        background-color: #fff;
+      }
+
+        /*This class is directed at the main boxes for areas*/
+    .box {
+        background-color: white;
+        color: black;
+        padding: 20px;
+        font-size: 100%;
+        text-align: left;
+        height: 200px;
+
+      }
+
+        /*header is affected by this class*/
+    .a {
+        grid-column: 1 / 12;
+        grid-row: 1 / 2 ;
+        height: auto;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 0;
+        color: black;
+
+    }
+      /*contains the the gallery content*/
+    .b {
+      grid-column: 1 / 12;
+      grid-row: 3/4;
+      height: auto;
+    }
+
+      /*navbar and its background is affected by this class*/
+  .e {
+      grid-column: 1 / 12;
+      grid-row: 2 / 3;
+      height: auto;
+      text-align: left;
+      background: #627d4d; /* Old browsers */
+      background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+      /*footer and it's background is affected by this class*/
+  .f {
+    grid-column: 1 / 12;
+    grid-row: 11 / 12 ;
+    height: auto;
+    width: 1100px;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 0;
+    color: black;
+    background: #627d4d; /* Old browsers */
+    background: -moz-linear-gradient(top, #627d4d 0%, #1f3b08 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #627d4d 0%,#1f3b08 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #627d4d 0%,#1f3b08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   }
+
+      /*for grids within section*/
+  .test {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    padding: 20px;
+    margin-left: 10px;
+    text-align: center;
+
+   }
+
+  /*This is the styling for the nav bar and it's list items*/
+  ul {
+    list-style-type: none;
+    display: inline;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+   }
+
+  li {
+    float: left;
+    display: inline;
+   }
+
+  li a {
+    display: inline;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+   }
+
+   li a:hover {
+     color: grey;
+     background-color: transparent;
+     text-decoration: underline;
+   }
+
+
+      /*NOTE this is the styling for the hover effect on */
+
+/* clearfix */
+  .clearfix {
+  	clear:both;
+  }
+
+/* wrapper content style */
+  #wrapper{
+  	margin:0 0 3em;
+  	padding:10px 7%;
+  	text-align:center;
+  }
+
+/* The following wrapper styling is responsible for layout in the gallery pictures and content as well as the hover effects on the page including the content, the pictures, the header h2, h3
+as well as the font sizing and font family for the selected sections*/
+/* hgroup refers to the headers on the page*/
+  #wrapper hgroup{
+  	margin:0 0 20px;
+  	z-index:5;
+  	position:relative;
+  	display:inline-block;
+  }
+
+  #wrapper hgroup:hover{
+  	z-index:10;
+  }
+
+  #wrapper h2{
+  	position:relative;
+
+  	margin:0;
+  	color:#0082E0;
+  	text-align:center;
+  	text-shadow:1px 1px 1px #777;
+  	font-size:33px;
+  	font-family:Arial Narrow, Arial, sans-serif;
+
+  	transition: color 1s, font-size 1s, text-shadow 1s;
+  	-moz-transition: color 1s, font-size 1s, text-shadow 1s;
+  	-webkit-transition: color 1s, font-size 1s, text-shadow 1s;
+  	-o-transition: color 1s, font-size 1s, text-shadow 1s;
+  }
+
+  #wrapper h2 span{
+  	color:#56B8FF;
+
+  	transition: color 1s, text-shadow 1s;
+  	-moz-transition: color 1s, text-shadow 1s;
+  	-webkit-transition: color 1s, text-shadow 1s;
+  	-o-transition: color 1s, text-shadow 1s;
+  }
+
+  #wrapper hgroup h3{
+  	font-style:italic;
+  	font-weight:normal;
+  	font-size:18px;
+  	text-shadow:0 1px 0 #fafafa;
+  	color:#444;
+  	margin:0;
+
+  	transition: color 1s, font-size 1s;
+  	-moz-transition: color 1s, font-size 1s;
+  	-webkit-transition: color 1s, font-size 1s;
+  	-o-transition: color 1s, font-size 1s;
+  }
+
+  #wrapper hgroup:hover h2{
+  	color:#C9EEFF;
+  	z-index:10;
+  	font-size:40px;
+  	text-shadow:0 0 20px #EAF8FF;
+  }
+
+  #wrapper hgroup:hover span{
+  	color:#fafafa;
+  	font-style:italic;
+  	text-shadow:0 0 20px #fafafa;
+  }
+
+  #wrapper hgroup:hover h3{
+  	color:#ccc;
+  	font-size:20px;
+  }
+
+  #holder{
+  	position:relative;
+  }
+
+
+  /* box is aimed at the style of the boxes including the style, borders, the size and box shadows
+  the box shadows are set for different browsers */
+
+  .box{
+  	text-align:center;
+  	background-color:#f4f4f4;
+  	border:1px solid #ccc;
+  	float:left;
+    height: auto;
+  	margin:5px 1%;
+  	padding:10px 2% 15px;
+  	position:relative;
+  	z-index:5;
+  	box-sizing:border-box;
+  	-moz-box-sizing:border-box;
+  	-webkit-box-sizing:border-box;
+
+  	box-shadow:0 0 3px #ccc;
+  	-moz-box-shadow:0 0 3px #ccc;
+  	-webkit-box-shadow:0 0 3px #ccc;
+
+  	transform: scale(1);
+  	-moz-transform: scale(1);
+  	-webkit-transform: scale(1);
+
+  	transition: background-color 1s, box-shadow 1s, transform 0.5s;
+  	-moz-transition: background-color 1s, -moz-box-shadow 1s, -moz-transform 0.5s;
+  	-webkit-transition: background-color 1s, -webkit-box-shadow 1s, -webkit-transform 0.5s;
+  	-o-transition: background-color 1s, -o-box-shadow 1s, -o-transform 0.5s;
+  }
+  .box:hover{
+  	background-color:#fff;
+  	z-index:10;
+
+  	box-shadow:0 0 15px #333;
+  	-moz-box-shadow:0 0 15px #333;
+  	-webkit-box-shadow:0 0 15px #333;
+
+  	transform: scale(1.1);
+  	-moz-transform: scale(1.1);
+  	-webkit-transform: scale(1.1);
+  }
+  .box-1 { max-width:24%; }
+  .box-2 { max-width:44%; }
+  .box-3 { max-width:35%; }
+
+  /* title holder */
+  .box h3{
+  	font-size:19px;
+  	color:#777;
+  	margin:5px 10px;
+  	padding:5px 10px;
+  	font-family:'Arial Narrow', Arial;
+  	letter-spacing:1px;
+  	text-shadow:0 1px 1px #ccc;
+  	border-bottom:0 solid #fff;
+
+  	transition: color 1s, text-shadow 1s, border-bottom 1s;
+  	-moz-transition: color 1s, text-shadow 1s, border-bottom 1s;
+  	-webkit-transition: color 1s, text-shadow 1s, border-bottom 1s;
+  	-o-transition: color 1s, text-shadow 1s, border-bottom 1s;
+  }
+
+  .box:hover h3{
+  	color:#333;
+  	border-bottom:1px solid #aaa;
+  	text-shadow:1px 1px 1px #fff, 2px 2px 1px #888;
+  }
+
+  /* image holder */
+  .box .image{
+  	margin:10px;
+  	opacity:0.5;
+  	filter: alpha(opacity=50);
+
+  	transition: opacity 1s;
+  	-moz-transition: opacity 1s;
+  	-webkit-transition: opacity 1.5s;
+  	-o-transition: opacity 1s;
+  }
+
+  .box:hover .image{
+  	opacity:1;
+  	filter: alpha(opacity=100);
+  }
+
+  .box .image img{
+  	padding:7px;
+  	background:#000;
+  }
+
+  .box .image img:hover{
+  	background:#333;
+  }
+
+  /* description text holder */
+  .box .description, .box .description a{
+  	color:rgb(153,153,153);
+  	color:rgba(153,153,153,0);
+  	text-shadow:0 0 5px #aaa;
+  	text-align:left;
+  	font-size:14px;
+
+  	transition: text-shadow 1s ease 0.5s, color 1s ease 0.5s, outline 1s ease 0.5s;
+  	-moz-transition: text-shadow 1s ease 0.5s, color 1s ease 0.5s, outline 1s ease 0.5s;
+  	-webkit-transition: text-shadow 1s ease 0.5s, color 1s ease 0.5s, outline 1s ease 0.5s;
+  	-o-transition: text-shadow 1s ease 0.5s, color 1s ease 0.5s, outline 1s ease 0.5s;
+  }
+  .box:hover .description, .box:hover .description a{
+  	text-shadow:0 0 0 #fff;
+  	color:rgb(100,100,100);
+  }
+  .box:hover .description a{
+  	outline:1px dotted #777;
+  }
+
+    /*This is the overlay for the page the major hover that will appear when hovering over a specific section of the page*/
+  #overlay{
+  	position:fixed;
+  	width:100%;
+  	height:100%;
+  	left:0;
+  	top:0;
+  	z-index:7;
+  	background:rgb(0,0,0);
+  	background:rgba(0,0,0,0.5);
+  	filter: alpha(opacity=50);
+
+  	transition: background-color 0.7s;
+  	-moz-transition: background-color 0.7s;
+  	-webkit-transition: background-color 0.7s;
+  	-o-transition: background-color 0.7s;
+  }
+
+  #overlay:hover{
+  	background:rgb(0,0,0);
+  	background:rgba(0,0,0,0);
+  	z-index:0;
+  	filter: alpha(opacity=0);
+  }
+
+    /*This is the styling for icons including socila media and external*/
+  .fa {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    width: 20px;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+  .fa-external-link-square {
+    background: white;
+    color: black;
+    font-size: 8px;
+  }
+
+  .fa-facebook {
+    background: #3F5C9A;
+    color: white;
+  }
+
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+  .fa-twitter {
+    background: #1DA1F2;
+    color: white;
+
+  }
+  .fa-instagram {
+  background: #e4405f;
+  color: white;
+  }
+
+    </style>
+
+  </head>
+
+  <body>
+        <!-- wrapper for the entire page starts -->
+    <div class="wrapper">
+
+          <!-- box a contains the header, including the logo and the newsletter form -->
+  <div class="box a" id="Home">
+
+      <header class="test">
+
+
+        <img src="Images/mblogo.png" alt="Muddy Boots Logo" height="150px" width="250">
+
+        <form>
+
+          <h3 id="h3-special">Join our newsletter</h3>
+              <!-- newsletter starts -->
+        <input type="text" name="email" title="Sign up for our newsletter" placeholder="Your Email" autocomplete="off" class="mailchimp-subscribe__input">
+
+        <input type="radio" name="gender" value="male">daily
+        <input type="radio" name="gender" value="male">weekly
+        <input type="radio" name="gender" value="male">both
+
+        <button type="submit" title="Sign Up" class="mailchimp-subscribe__button">
+                   Submit</button>
+      </form>
+
+      </header>
+
+  </div>
+          <!-- header ends -->
+
+            <!-- box b holds the content for the gallery. the entire gallery is contained within section -->
+  <div class="box b">
+
+    <section>
+
+      <hgroup>
+
+    		<h2>Image Gallery</h2>
+
+    		<h3>Image gallery showcasing beautiful scenery of South Africa's great outdoors</h3>
+
+    	</hgroup>
+
+    	<!--<p style="font-size: 20px; padding: 20px 0 50px; color:#DB0000;"> This only works in modern browsers-->
+
+      <!-- holder will contain the content gallery -->
+    <div id="holder">
+
+    	<div class="box box-1">
+
+    		<h3>Silvermine Crags</h3>
+
+    		<div class="image">
+
+    			<img src="http://www.capetownmagazine.com/media_lib/preview/9b4a7220b07385be0c989c9af41a77de.preview.jpg" alt="Silvermine">
+
+        </div>
+
+    		<div class="description">
+
+    			This is also in the Silvermine Nature Reserve, but on the other side overlooking Muizenberg. It offers fantastic views, interesting rock formations and plenty of untouched fynbos.
+
+        </div>
+
+    	</div>
+
+    	<div class="box box-2">
+
+    		<h3>Tranquility Cracks</h3>
+
+    		<div class="image">
+
+    			<img src="http://www.capepointroute.co.za/blog/wp-content/uploads/2011/11/11-tranquility-cracks-view.jpg" alt="Tranquility Cracks" />
+
+        </div>
+
+    		<div class="description">
+
+    			On this route you can stop where the Old Cableway used to be and then carry on hiking up through the Valley of Isolation (more beautiful rock formations) and up the backside of Table Mountain.
+    		</div>
+
+    	</div>
+
+    	<div class="box box-1">
+
+    		<h3>Right Face Arrow Traverse</h3>
+
+    		<div class="image">
+
+    			<img src="https://i2.wp.com/www.cape-hike.co.za/wp-content/uploads/2011/02/traverse-cracks.jpg?resize=800%2C445" alt="RFA Traverse" />
+
+        </div>
+
+    		<div class="description">
+
+    			This spectacular traverse on the face of Table Mountain is not for the faint-hearted! At two points the route appears to disappear: it in fact literally leads into the mountain itself through some narrow crevices.
+
+        </div>
+    	</div>
+
+
+    	<div class="box box-2">
+
+    		<h3>Alphen trails</h3>
+
+    		<div class="image">
+
+    			<img src="http://www.capetownmagazine.com//media_lib/r2/725b850aa664f8058f60969e867b45bf.img.jpg" alt="Alphen trails">
+
+        </div>
+
+    		<div class="description">
+
+    			In the Constantia valley in the Southern Suburbs there are several walking trails along tracts of land between the residences.
+
+        </div>
+
+    	</div>
+
+    	<div class="box box-2">
+
+    		<h3>Eastern Cape Highlands</h3>
+
+    		<div class="image">
+
+    			<img src="http://media.withtank.com/3ad5c607a7/3ad5c607a7_940_wide.jpg" alt="Eastern Cape Highlands" />
+
+        </div>
+
+    		<div class="description">
+
+    			There are not many places in the world where you can drive for 50km and not pass another car but the highlands of the Eastern Cape is one such place.
+
+        </div>
+    	</div>
+
+
+    	<div class="box box-2">
+
+    		<h3>Witels</h3>
+
+    		<div class="image">
+
+    			<img src="https://www.nightjartravel.com/sites/default/files/169%20Fly%20Fishing/WC%20Witels%201%20upper%20reaches..jpg" alt="Witels" />
+
+        </div>
+
+    		<div class="description">
+
+    			The Witels is a mysterious river that runs through the southwestern side of the Hex River Mountains and joins the Dwars River that comes in from Ceres side to form the Breede River.
+
+        </div>
+
+    	</div>
+
+    	<div class="box box-2">
+
+    		<h3>Tulbagh</h3>
+
+    		<div class="image">
+
+    			<img src="https://4.bp.blogspot.com/-Mb5MLgiepSQ/UiN3_U9LkCI/AAAAAAAAARM/bVK3S0vwprg/s1600/Canola+fields.jpg" alt="Tulbagh" />
+
+        </div>
+
+        <div class="description">
+
+          Montpellier De Tulbagh in the Tulbagh Winelands, provides a romantic setting for 2 Night Week Day Escape, with beautiful wine and delicious food.
+
+        </div>
+
+      </div>
+
+      <div class="box box-1">
+
+        <h3>Rocklands Bouldering</h3>
+
+        <div class="image">
+
+          <img src="https://www.outdoorresearch.com/blog/images/articles/Regan_On_Shark.jpg" alt="Rocklands Bouldering">
+
+        </div>
+
+        <div class="description">
+
+           I guess it's not surprising that the climbing community is welcoming, but again, the gang we climbed with in Rocklands was amazing.
+
+        </div>
+
+      </div>
+
+
+      <div class="box box-1">
+
+        <h3>Tweede Tol</h3>
+
+        <div class="image">
+
+          <img src="https://gocampingsa.files.wordpress.com/2011/03/dsc009121.jpg" alt="Tweede Tol">
+
+        </div>
+
+        <div class="description">
+
+          Despite experiencing Tweede Tol in December (twice) in what felt like 2 day, inland hurricanes, Tweede Tol has a lot going for it. It sits comfortably next to the Witte and Wolwekloof rivers, with most campsites along the latter. Spots are mostly shady and every effort is made to keep the grass growing and green.
+
+        </div>
+
+      </div>
+
+
+      <div class="clearfix"></div>
+
+    </div>
+      <!-- holder div ends -->
+
+        <!-- this div is responsible for the overlay -->
+    <div id="overlay"></div>
+
+    </section>
+
+  </div>
+        <!-- section ends -->
+
+        <!-- box e contains the nav bar -->
+  <div class="box e">
+
+
+    <nav>
+
+          <ul>
+
+              <li><a href="index.html">Home<a></li>
+                  <li><a href="#hike">Hiking<a></li>
+                    <li><a href="#rock">Rock Climbing<a></li>
+                      <li><a href="#camp">Camping<a></li>
+                        <li><a href="#fish">Fishing<a></li>
+                          <li><a href="css_grid_project_contactpage.html">Contact<a></li>
+
+          </ul>
+
+        </nav>
+
+
+  </div>
+        <!-- nav bar ends -->
+
+          <!-- box f contains the footer -->
+ <div class="box f">
+
+    <footer class="test">
+
+
+          <img src="Images/hiking-boot.png" alt="Muddy Boots Logo Footer" height="100px" width="100px">
+          &copy copyright 2017
+
+          <div>
+          <h4>Get in touch:</h4>
+
+          <a href="#" target="_blank"><i class="fa fa-facebook"></i> Facebook</a>
+          <a href="#" target="_blank"><i class="fa fa-twitter"></i>Twitter</a>
+          <a href="#" target="_blank"><i class="fa fa-youtube"></i>Youtube</a>
+          <a href="#" target="_blank"><i class="fa fa-instagram"></i>Instagram</a>
+
+        </div>
+
+        </div>
+
+    </footer>
+        <!-- footer ends -->
+
+</div>
+
+        <!-- div for wrapper closes -->
+
+
+  </body>
+</html>
